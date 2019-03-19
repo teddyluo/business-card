@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Latex Business Card (Both English and Chinese)
 =============
 
@@ -9,6 +8,9 @@ Example:
     <img src="screenshot/EnglishPage.png" alt-="back side business card" width="200px"/>
 </div>
 
+Final files:
+* Latex Source File: [main.tex](main.tex)
+* PDF File: [main.pdf](main.pdf)
 
 Requirements
 ------------
@@ -48,7 +50,4 @@ Reference
 ----
 * [Jiaolong/latex-business-card](https://github.com/Jiaolong/latex-business-card)
 * [Naereen/Business-Card](https://github.com/Naereen/Business-Card)
-=======
-# business-card
-personal business card
->>>>>>> c5fed105d9e84f3076f524a0f7c7f4d7c7e9e2ea
+
