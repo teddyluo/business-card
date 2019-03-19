@@ -1,0 +1,192 @@
+% !TeX TS-program = xelatex
+
+
+\documentclass[12pt,a4paper]{memoir}
+
+\setstocksize{55mm}{85mm} % UK Stock size
+\setpagecc{55mm}{85mm}{*}
+\settypeblocksize{45mm}{75mm}{*}
+\setulmargins{5mm}{*}{*}
+\setlrmargins{5mm}{*}{*}
+\usepackage{xcolor}
+
+\usepackage{ctex}
+\usepackage{subfig}
+%\usepackage{datatool}
+%% The "database" is a comma-separated values (CSV) file.
+%% The first line should contain the column headers, without space characters, e.g.
+%% Name,JobTitle,Department
+%%
+%% If a field value contains a comma, then the field value needs to be surrounded with double quotes, e.g. 
+%% John Smith,Lecturer,"School of Science, Mathematics and Engineering"
+%%
+%% Spreadsheet applications can usually export such a .csv file.
+%%
+%% If field values are expected to contain LaTeX special characters like $, &, then use \DTLloadrawdb{data}.csv instead.
+%\DTLloaddb{namelist}{data.csv}
+
+\setheadfoot{0.1pt}{0.1pt}
+\setheaderspaces{1pt}{*}{*}
+\usepackage{fontspec}
+%\setmainfont[]{EBGaramond12-Regular.ttf} 
+
+\checkandfixthelayout[fixed]
+
+\pagestyle{empty}
+
+
+\usepackage{pstricks}
+\usepackage{auto-pst-pdf,pst-barcode}
+
+
+%% These packages only for typesetting the instructions
+\usepackage{listings}
+\usepackage{enumitem}
+
+\graphicspath{{figs/}}
+
+\begin{document}
+\newcommand{\Name}{
+{\yahei\textbf{罗辉武}}
+}%
+\newcommand{\NameEn}{
+{\textbf{Huiwu Luo}}
+}%
+\newcommand{\Subtitle}{
+{\kaishu 博士}
+}%
+\newcommand{\SubtitleEn}{
+{Ph.D.}
+}
+\newcommand{\Division}{
+{\kaishu 长虹AI实验室}
+}%
+\newcommand{\DivisionEn}{
+{Changhong AI Research}
+}%
+
+\newcommand{\JobTitle}{
+{\kaishu 高级研究员}
+}%
+\newcommand{\JobTitleEn}{
+{Senior Researcher}
+}%
+\newcommand{\EmailOne}{
+luohuiwu@gmail.com
+}%
+\newcommand{\Mobile}{
+(+86) 185-8490-2048
+}%
+\newcommand{\ZipCode}{
+610041
+}%
+\newcommand{\SpecialityOne}{
+同步定位与导航
+}%
+\newcommand{\SpecialityOneEn}{
+%{\tiny Simultaneous Localization and Mapping}
+SLAM
+}%
+\newcommand{\SpecialityTwo}{
+机器视觉
+}
+\newcommand{\SpecialityTwoEn}{
+Computer Vision
+}
+\newcommand{\SpecialityThree}{
+机器人
+}%
+\newcommand{\SpecialityThreeEn}{
+Robotics
+}%
+\newcommand{\Address}{
+四川省成都市天府四街199号长虹科技大厦A座3805
+}
+\newcommand{\AddressEn}{
+%Room 3805, A Block, Changhong Technology Mansion, Tianfu 4th Street, High-tech Zone, Chengdu, Sichuan.
+Room 3805, A Block, Changhong Technology Mansion, 4th Tianfu Avenue, High-tech Zone, Chengdu, Sichuan.
+}
+
+\begin{Spacing}{0.75}%
+    \noindent
+    \textbf{\large\Name}%\\[3pt]
+    {\small\Subtitle} \hfill\hfill\hfill {\footnotesize\color{gray}\Division{}\hfill\includegraphics[height=20pt]{chairNew.jpg}}\\
+    \rule{\textwidth}{.6mm}\\
+    \begin{minipage}[t]{30mm}
+        \vspace{-0mm}%
+      \begin{minipage}{2.6cm}
+        \includegraphics[width=\textwidth]{wechat}
+      \end{minipage}
+  \end{minipage}
+    %\hspace{1mm}
+    \begin{minipage}[t]{42mm}
+        \vspace{-0mm}%
+        \begin{flushleft}
+        {   \scriptsize
+            \begin{Spacing}{1}%
+            \textbf{\small\JobTitle}\\[3pt]
+            \hspace{5mm}\mbox{}\SpecialityOne\\
+            %\hspace{5mm}\mbox{}\SpecialityTwo\\
+            \hspace{5mm}\mbox{}\SpecialityThree \vspace{2mm}\\
+            \end{Spacing}
+        }
+        {\tiny
+        	\begin{tabular}{@{}r@{\hspace{2mm}}l}
+            	%{\color{gray}web} & \Web\\
+            	{\color{gray}邮件} & \EmailOne \\
+            	{\color{gray}电话} & \Mobile \\
+                {\color{gray}邮编} & \ZipCode
+            \end{tabular}
+            \vspace*{2mm}
+        }
+        \end{flushleft}
+    \end{minipage}\\%[-5pt]
+    %\rule{74mm}{0.1mm}\\
+    %\texttt{\fontsize{2.84mm}{3.55mm}\selectfont} % GPG KEY ID
+    {\tiny\color{gray}地址:}\tiny \Address
+    %\rule{74mm}{0.1mm}
+ \end{Spacing}
+
+\newpage
+\begin{Spacing}{0.75}%
+    \noindent
+    \textbf{\normalsize\NameEn}{\itshape\tiny\SubtitleEn}%\\[3pt]
+    \hfill{\color{gray}{\tiny\DivisionEn}\includegraphics[height=20pt]{chairNew.jpg}}\\[-5pt]
+    \rule{\textwidth}{.6mm}\\[-5pt]
+    \begin{minipage}[t]{30mm}
+        \vspace{-0mm}%
+      \begin{minipage}{2.6cm}
+        \includegraphics[width=\textwidth]{wechat}
+      \end{minipage}
+  \end{minipage}
+    %\hspace{1mm}
+    \begin{minipage}[t]{42mm}
+        \vspace{-0mm}%
+        \begin{flushleft}
+        {   \scriptsize
+            \begin{Spacing}{1}%
+            \textbf{\small\JobTitleEn}\\[3pt]
+            \hspace{5mm}\mbox{}\SpecialityOneEn\\
+            %\hspace{5mm}\mbox{}\SpecialityTwoEn\\
+            \hspace{5mm}\mbox{}\SpecialityThreeEn \vspace{2mm}\\
+            \end{Spacing}
+        }
+        {\tiny
+        	\begin{tabular}{@{\hspace{-5mm}}r@{\hspace{2mm}}l}
+            	%{\color{gray}web} & \Web\\
+            	{\color{gray}Email} & \EmailOne \\
+            	{\color{gray}Mobile} & \Mobile  \\
+                {\color{gray}Zip Code} & \ZipCode
+            \end{tabular}
+            \vspace*{2mm}
+        }
+        \end{flushleft}
+    \end{minipage}\\%[-5pt]
+    %\rule{74mm}{0.1mm}\\
+    %\texttt{\fontsize{2.84mm}{3.55mm}\selectfont} % GPG KEY ID
+     %{\tiny\color{gray}}
+     {\noindent\tiny \AddressEn}
+    %\rule{74mm}{0.1mm}
+ \end{Spacing}
+
+\end{document}
